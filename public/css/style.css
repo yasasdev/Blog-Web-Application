@@ -8,9 +8,9 @@
     --blue: #0000b3;
     --custom: #7a96b9;
     --fint-size-base: 1rem;
-    --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+    --font-size-md: clamp(1.2rem, 0.61vw + 1.1rem, 1.5rem);
     --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
-    --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+    --font-size-xl: clamp(2.44rem, 2vw + 1.5rem, 3.7rem);
     --border-radius: 10px;
 }
 
@@ -194,7 +194,7 @@ img {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    font-size: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+    font-size: clamp(1.13rem, calc(1.08rem + 0.2vw), 1.25rem);
     display: flex;
     flex-direction: column;
 }
