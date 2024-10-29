@@ -7,7 +7,7 @@
     --red: #b30000;
     --blue: #0000b3;
     --custom: #7a96b9;
-    --fint-size-base: 1rem;
+    --font-size-base: 1rem;
     --font-size-md: clamp(1.2rem, 0.61vw + 1.1rem, 1.5rem);
     --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
     --font-size-xl: clamp(2.44rem, 2vw + 1.5rem, 3.7rem);
