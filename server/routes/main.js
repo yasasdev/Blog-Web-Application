@@ -38,6 +38,26 @@ router.get('/', async (req, res) => {
 
 });
 
+// GET Post :id
+router.get('/post/:id', async (req, res) => {  
+
+    try {
+        const locals = {
+            title: "NodeJS Blog",
+            description: "Blog created with NodeJS, Express, and MongoDB."
+        }
+
+        let slug = req.params.id;
+
+        const data = await Post.findById({ _id: slug });
+        res.render('index', {locals, data});
+    } catch (error) {
+        locals.errorMessage = "An error occurred while fetching data.";
+        res.render('index', { locals });
+    }
+
+});
+
 router.get('/about', (req, res) => {
     res.render('about');
 });
