@@ -42,18 +42,51 @@ router.get('/', async (req, res) => {
 router.get('/post/:id', async (req, res) => {  
 
     try {
-        const locals = {
-            title: "NodeJS Blog",
-            description: "Blog created with NodeJS, Express, and MongoDB."
-        }
-
         let slug = req.params.id;
 
         const data = await Post.findById({ _id: slug });
-        res.render('index', {locals, data});
+
+        const locals = {
+            title: data.title,
+            description: "Blog created with NodeJS, Express, and MongoDB."
+        }
+        
+        res.render('post', {locals, data});
     } catch (error) {
         locals.errorMessage = "An error occurred while fetching data.";
-        res.render('index', { locals });
+        res.render('post', { locals });
+    }
+
+});
+
+//POST Post - searchTerm
+router.post('/search', async (req, res) => {
+
+    try {
+
+        const locals = {
+            title: "Search",
+            description: "Blog created with NodeJS, Express, and MongoDB."
+        }
+
+        let searchTerm = req.body.searchTerm;
+        const searchNoSpecialChar = searchTerm.replace(/[^a-zA-Z0-9]/g, "");
+
+        const data = await Post.find({
+            $or: [
+                { title: { $regex: new RegExp(searchNoSpecialChar, 'i') }},
+                { body: { $regex: new RegExp(searchNoSpecialChar, 'i') }}
+            ]
+        });
+
+        res.render("search", {
+            data,
+            locals
+        });
+        
+    } catch (error) {
+        locals.errorMessage = "An error occurred while fetching data.";
+        res.render('search', { locals });
     }
 
 });
