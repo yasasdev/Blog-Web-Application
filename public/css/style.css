@@ -9,8 +9,8 @@
     --custom: #7a96b9;
     --font-size-base: 1rem;
     --font-size-md: clamp(1.2rem, 0.61vw + 1.1rem, 1.5rem);
-    --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
-    --font-size-xl: clamp(2.44rem, 2vw + 1.5rem, 3.7rem);
+    --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 1.11rem);
+    --font-size-xl: clamp(2.4rem, 2vw + 1rem, 3.5rem);
     --border-radius: 10px;
 }
 
@@ -23,8 +23,8 @@ body {
     margin: 0;
 }
 
-a { color: var(--black); }
-p { color: var(--custom); font-weight: bold; }
+a { color: var(--black); font-size: var(--font-size-base); }
+p { color: var(--gray); font-size: var(--font-size-base); }
 h1 { font-size: var(--font-size-xl); color: var(--custom); }
 h2 { font-size: var(--font-size-lg); }
 h3 { font-size: var(--font-size-md); }
@@ -180,7 +180,6 @@ img {
 }
 
 .author__body {
-    font-size: var(--font-size-md);
     margin: 5px 0 40px 0;
 }
 
