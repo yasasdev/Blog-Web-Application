@@ -12,6 +12,7 @@
     --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 1.11rem);
     --font-size-xl: clamp(2.4rem, 2vw + 1rem, 3.5rem);
     --border-radius: 10px;
+    --custom-font: Georgia, 'Times New Roman', Times, serif;
 }
 
 body {
@@ -24,7 +25,7 @@ body {
 }
 
 a { color: var(--black); font-size: var(--font-size-base); }
-p { color: var(--gray); font-size: var(--font-size-base); }
+p { color: var(--gray); font-size: var(--font-size-base); font-family: var(--custom-font); }
 h1 { font-size: var(--font-size-xl); color: var(--custom); }
 h2 { font-size: var(--font-size-lg); }
 h3 { font-size: var(--font-size-md); }
