@@ -250,6 +250,7 @@ img {
 
 .article {
     white-space: pre-wrap;
+    color: gray;
 }
 
 /* Footer */
@@ -276,13 +277,16 @@ img {
 
 .admin-post-controls .btn  {
     display: inline-block;
-    background-color: var(--black);
     color: var(--gray-light);
     border: 0;
     text-decoration: none;
     font-size: .8rem;
     padding: 4px 8px;
     line-height: 2;
+}
+
+.btn {    
+    border-radius: 9px;
 }
 
 .admin-posts li {
